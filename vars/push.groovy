@@ -4,8 +4,7 @@ def call(String imageName, String dockerTag){
       credentialsId: "Docker-Hub",
       usernameVariable: "dockerUser",
       passwordVariable: "dockerPass"
-      
-      )
+    )
   ]){
     echo "Pushing the code..."
     sh "docker login -u ${dockerUser} -p ${dockerPass}"
